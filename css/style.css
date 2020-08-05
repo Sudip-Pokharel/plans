@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 *,
 *::before,
 *:after {
@@ -15,7 +15,7 @@ html {
 body {
   position: relative;
   font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.6;
   box-sizing: border-box;
 }
@@ -24,9 +24,20 @@ ul {
   list-style-type: none;
 }
 
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.container {
+  padding: 8rem 2rem;
 }
 
 .plan-wrapper {
@@ -34,39 +45,80 @@ ul {
   flex-wrap: wrap;
 }
 .plan-wrapper .plan-type-header {
-  flex: 0 0 calc(100% - $feature-width);
   display: flex;
   justify-content: center;
-  margin-left: 33rem;
 }
-.plan-wrapper .plan-type-header .title.title--medium {
-  width: 20rem;
+.plan-wrapper .plan-type-header .feature {
+  width: 33rem;
+  margin-right: 2rem;
+}
+.plan-wrapper .plan-type-header .plan-name {
+  display: flex;
+  justify-content: center;
+}
+.plan-wrapper .plan-type-header .plan-name .title.title--big {
+  width: 24rem;
   text-align: center;
+  padding: 2rem 0;
+  color: #FFFFFF;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+.plan-wrapper .plan-type-header .plan-name .title.title--big:not(:last-child) {
+  margin-right: 2.2rem;
+}
+.plan-wrapper .plan-type-header .plan-name .title.title--big.basic {
+  background-color: #1A9D98;
+}
+.plan-wrapper .plan-type-header .plan-name .title.title--big.gold {
+  background-color: #359784;
+}
+.plan-wrapper .plan-type-header .plan-name .title.title--big.platinum {
+  background-color: #1B9DB3;
 }
 .plan-wrapper .plan-content-box {
   flex: 0 0 100%;
   display: flex;
-  padding-top: 2rem;
+  padding-top: 0.2rem;
   position: relative;
 }
 .plan-wrapper .plan-content-box .side-plan-box {
   flex: 0 0 33rem;
   padding-top: 3rem;
+  margin-right: 2rem;
   display: flex;
+}
+.plan-wrapper .plan-content-box .side-plan-box .title.title--medium {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: #359784;
+  color: #FFFFFF;
+  border-radius: 0.3rem;
+  margin-bottom: 1.4rem;
 }
 .plan-wrapper .plan-content-box .side-plan-box .average-box {
   margin-right: 0.5rem;
+  flex: 0 0 50%;
 }
 .plan-wrapper .plan-content-box .side-plan-box .average-box ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 11rem;
-  background-color: #ccc;
+  background-color: rgba(236, 252, 249, 0.32);
   border-radius: 0.5rem;
+  font-size: 1.4rem;
+  color: #1A929B;
+  font-weight: 600;
 }
 .plan-wrapper .plan-content-box .side-plan-box .average-box ul li:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+.plan-wrapper .plan-content-box .side-plan-box .location-box {
+  flex: 0 0 50%;
 }
 .plan-wrapper .plan-content-box .side-plan-box .location-box ul li {
   height: 11rem;
@@ -74,10 +126,13 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.4rem;
+  color: #1A929B;
+  font-weight: 600;
 }
 .plan-wrapper .plan-content-box .side-plan-box .location-box ul li span {
   width: 100%;
-  background-color: #ccc;
+  background-color: rgba(236, 252, 249, 0.32);
   border-radius: 0.5rem;
   display: block;
   text-align: center;
@@ -88,31 +143,52 @@ ul {
   margin-bottom: 0.5rem;
 }
 .plan-wrapper .plan-content-box .center-plan-box {
-  flex: 0 0 calc(100% - $feature-width);
   display: flex;
   justify-content: center;
 }
 .plan-wrapper .plan-content-box .center-plan-box > div {
-  width: 20rem;
+  width: 24rem;
   text-align: center;
+  border-radius: 0.3rem;
 }
-.plan-wrapper .plan-content-box .center-plan-box > div span {
-  font-size: 2rem;
+.plan-wrapper .plan-content-box .center-plan-box > div:not(:last-child) {
+  margin-right: 2.2rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div .plan-price {
+  font-size: 3.8rem;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div.basic .plan-price {
+  color: #1A9D98;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div.gold .plan-price {
+  color: #359784;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div.platinum .plan-price {
+  color: #1B9DB3;
 }
 .plan-wrapper .plan-content-box .center-plan-box > div ul {
-  margin-top: 4rem;
+  padding: 0 0.3rem;
 }
 .plan-wrapper .plan-content-box .center-plan-box > div ul li {
-  height: 11rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.plan-wrapper .plan-content-box .center-plan-box > div ul li:not(:last-child) {
+  height: 11rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li:last-child {
+  height: auto;
+  padding: 0.8rem 0;
+}
 .plan-wrapper .plan-content-box .center-plan-box > div ul li div {
   width: 100%;
-  background-color: #ccc;
-  border-radius: 0.5rem;
+  background-color: rgba(236, 252, 249, 0.32);
+  border-radius: 0.3rem;
   display: block;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -132,13 +208,28 @@ ul {
   z-index: 3;
 }
 .plan-wrapper .plan-content-box .center-plan-box > div ul li div.cross span svg {
-  fill: red;
+  fill: #B31938;
 }
 .plan-wrapper .plan-content-box .center-plan-box > div ul li div.check span svg {
-  fill: green;
+  fill: #57B31B;
 }
 .plan-wrapper .plan-content-box .center-plan-box > div ul li:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li.button-box .btn.btn--plan {
+  padding: 1.4rem 2.4rem;
+  border-radius: 0.3rem;
+  width: 100%;
+  text-align: center;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li.button-box .btn.btn--plan.basic {
+  background-color: #1A9D98;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li.button-box .btn.btn--plan.gold {
+  background-color: #359784;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li.button-box .btn.btn--plan.platinum {
+  background-color: #1B9DB3;
 }
 
 /*# sourceMappingURL=style.css.map */
