@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+$feature-width: 33rem;
+$each-feature-height: 11rem;
+
+$default-font: 'Lato', sans-serif;
+
+*,
+*::before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    font-size: 1.6rem;
+    font-family: $default-font;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.plan-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .plan-type-header {
+        flex: 0 0 calc(100% - $feature-width);
+        display: flex;
+        justify-content: center;
+        margin-left: $feature-width;
+
+        .title.title--medium {
+            width: 20rem;
+            text-align: center;
+        }
+    }
+
+    .plan-content-box {
+        flex: 0 0 100%;
+        display: flex;
+        padding-top: 2rem;
+        position: relative;
+
+        .side-plan-box {
+            flex: 0 0 $feature-width;
+            padding-top: 3rem;
+            display: flex;
+            .average-box {
+                margin-right: .5rem;
+                ul {
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: $each-feature-height;
+                        background-color: #ccc;
+                        border-radius: .5rem;
+                        &:not(:last-child) {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+
+            .location-box {
+                ul {
+                    li {
+                        height: $each-feature-height;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        span {
+                            width: 100%;
+                            background-color: #ccc;
+                            border-radius: .5rem;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: .5rem;
+                            min-height: 3.2rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .center-plan-box {
+            flex: 0 0 calc(100% - $feature-width);
+            display: flex;
+            justify-content: center;
+
+            &>div {
+                width: 20rem;
+                text-align: center;
+
+                span {
+                    font-size: 2rem;
+                }
+
+                ul {
+                    margin-top: 4rem;
+
+                    li {
+                        height: $each-feature-height;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        div {
+                            width: 100%;
+                            background-color: #ccc;
+                            border-radius: .5rem;
+                            display: block;
+                            text-align: center;
+                            margin-bottom: .5rem;
+                            min-height: 3.2rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                // &::before {
+                                //     content: '';
+                                //     position: absolute;
+                                //     width: 2.3rem;
+                                //     height: 2.3rem;
+                                //     border-radius: 100%;
+                                //     z-index: 2;
+                                // }
+                            }
+                            svg {
+                                position: relative;
+                                z-index: 3;
+                            }
+                            &.cross {
+                                span {
+                                    svg {
+                                        fill: red;
+                                    }
+                                    // &::before {
+                                    //     background-color: red;
+                                    // }
+                                }
+                            }
+                            &.check {
+                                span {
+                                    svg {
+                                        fill: green;
+                                    }
+                                    // &::before {
+                                    //     background-color: green;
+                                    // }
+                                }
+                            }
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

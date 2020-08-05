@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.plan-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.plan-wrapper .plan-type-header {
+  flex: 0 0 calc(100% - $feature-width);
+  display: flex;
+  justify-content: center;
+  margin-left: 33rem;
+}
+.plan-wrapper .plan-type-header .title.title--medium {
+  width: 20rem;
+  text-align: center;
+}
+.plan-wrapper .plan-content-box {
+  flex: 0 0 100%;
+  display: flex;
+  padding-top: 2rem;
+  position: relative;
+}
+.plan-wrapper .plan-content-box .side-plan-box {
+  flex: 0 0 33rem;
+  padding-top: 3rem;
+  display: flex;
+}
+.plan-wrapper .plan-content-box .side-plan-box .average-box {
+  margin-right: 0.5rem;
+}
+.plan-wrapper .plan-content-box .side-plan-box .average-box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 11rem;
+  background-color: #ccc;
+  border-radius: 0.5rem;
+}
+.plan-wrapper .plan-content-box .side-plan-box .average-box ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.plan-wrapper .plan-content-box .side-plan-box .location-box ul li {
+  height: 11rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.plan-wrapper .plan-content-box .side-plan-box .location-box ul li span {
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 0.5rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  min-height: 3.2rem;
+}
+.plan-wrapper .plan-content-box .side-plan-box .location-box ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box {
+  flex: 0 0 calc(100% - $feature-width);
+  display: flex;
+  justify-content: center;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div {
+  width: 20rem;
+  text-align: center;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div span {
+  font-size: 2rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul {
+  margin-top: 4rem;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li {
+  height: 11rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li div {
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 0.5rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  min-height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li div span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li div svg {
+  position: relative;
+  z-index: 3;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li div.cross span svg {
+  fill: red;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li div.check span svg {
+  fill: green;
+}
+.plan-wrapper .plan-content-box .center-plan-box > div ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
