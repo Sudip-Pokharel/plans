@@ -54,6 +54,24 @@ a:active {
 .plan-wrapper {
     display: flex;
     flex-wrap: wrap;
+    overflow-x: scroll;
+    
+    &::-webkit-scrollbar {
+     width: .3rem;
+     border-radius: .3rem;
+    }
+  
+    &::-webkit-scrollbar-track {
+        background: rgba(#f1f1f1,0.7);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #D9FAF3;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        background: #C6F7ED;
+    }
 
     .plan-type-header {
         display: flex;
@@ -99,7 +117,7 @@ a:active {
 
         .side-plan-box {
             flex: 0 0 $feature-width;
-            padding-top: 3rem;
+            padding-top: 5rem;
             margin-right: 2rem;
             display: flex;
             .title.title--medium {
@@ -112,7 +130,7 @@ a:active {
                 margin-bottom: 1.4rem;
             }
             .average-box {
-                margin-right: .5rem;
+                padding-right: .5rem;
                 flex: 0 0 50%;
 
                 ul {
@@ -135,6 +153,7 @@ a:active {
 
             .location-box {
                 flex: 0 0 50%;
+                padding-left: .5rem;
                 ul {
                     li {
                         height: $each-feature-height;
@@ -178,7 +197,7 @@ a:active {
                     font-size: 3.8rem;
                     display: block;
                     font-weight: 700;
-                    margin-bottom: 1.5rem;
+                    margin-bottom: 3.5rem;
                 }
                 &.basic {
                     .plan-price {
