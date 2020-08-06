@@ -42,19 +42,22 @@ a:active {
     color: #FFFFFF;
 }
 
-.container {
+.plan-container {
     max-width: 120rem;
     margin: 0 auto;
 }
 
-.container {
+.plan-container {
     padding: 8rem 2rem;
 }
 
 .plan-wrapper {
     display: flex;
     flex-wrap: wrap;
-    overflow-x: scroll;
+    padding-bottom: 2rem;
+    &.overflow--scroll {
+        overflow-x: scroll;
+    }
     
     &::-webkit-scrollbar {
      width: .3rem;

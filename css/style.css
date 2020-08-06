@@ -31,18 +31,21 @@ a:active {
   color: #FFFFFF;
 }
 
-.container {
+.plan-container {
   max-width: 120rem;
   margin: 0 auto;
 }
 
-.container {
+.plan-container {
   padding: 8rem 2rem;
 }
 
 .plan-wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+.plan-wrapper.overflow--scroll {
   overflow-x: scroll;
 }
 .plan-wrapper::-webkit-scrollbar {
